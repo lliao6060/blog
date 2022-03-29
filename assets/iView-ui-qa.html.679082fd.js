@@ -1,0 +1,1 @@
+const e={key:"v-80b66d98",path:"/post/UI/iView-ui-qa.html",title:"iview \u5E38\u898B\u554F\u984C",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:3,title:"\u554F\u984C",slug:"\u554F\u984C",children:[]}],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/UI/iView-ui-qa.md"};export{e as data};

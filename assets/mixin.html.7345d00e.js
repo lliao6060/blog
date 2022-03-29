@@ -1,0 +1,1 @@
+const t={key:"v-5c5bb207",path:"/post/Css_Sass/mixin.html",title:"scss mixin",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Css_Sass/mixin.md"};export{t as data};

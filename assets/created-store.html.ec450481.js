@@ -1,0 +1,1 @@
+const e={key:"v-ac6618c8",path:"/post/Vue/created-store.html",title:"\u5275\u5EFAvue store",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Vue/created-store.md"};export{e as data};

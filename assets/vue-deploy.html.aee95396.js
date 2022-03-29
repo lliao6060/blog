@@ -1,0 +1,1 @@
+const t={key:"v-182cc6bf",path:"/post/Javascript/vue-deploy.html",title:"vue + typeScript\u914D\u7F6E\u7B46\u8A18",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Javascript/vue-deploy.md"};export{t as data};

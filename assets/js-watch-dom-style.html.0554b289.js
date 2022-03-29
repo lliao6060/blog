@@ -1,0 +1,1 @@
+const t={key:"v-46bfd36e",path:"/post/issue/js-watch-dom-style.html",title:"js\u76E3\u807Ddom\u6A23\u5F0F\u8B8A\u5316",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/issue/js-watch-dom-style.md"};export{t as data};

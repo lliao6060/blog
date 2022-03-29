@@ -1,0 +1,1 @@
+const a={key:"v-c499fd22",path:"/post/Javascript/axios.html",title:"axios\u7B46\u8A18",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Javascript/axios.md"};export{a as data};
