@@ -1,1 +1,0 @@
-const t={key:"v-54d350f1",path:"/post/Vue/Components/doc-event-input.html",title:"\u985E\u4F3Cv-select\u6548\u679C\u7684input\u5BE6\u4F5C",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Vue/Components/doc-event-input.md"};export{t as data};

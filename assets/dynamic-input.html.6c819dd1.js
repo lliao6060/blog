@@ -1,1 +1,0 @@
-const t={key:"v-0e24be92",path:"/post/Vue/Components/dynamic-input.html",title:"\u52D5\u614Binput",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Vue/Components/dynamic-input.md"};export{t as data};
