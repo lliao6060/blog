@@ -1,0 +1,1 @@
+const e={key:"v-9be04774",path:"/post/issue/firework.html",title:"\u7159\u706B\u52D5\u756B",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1652079662e3,contributors:[{name:"MOMODA1\\FG000098",email:"meiliao1207@gmail.com",commits:2}]},filePathRelative:"post/issue/firework.md"};export{e as data};
