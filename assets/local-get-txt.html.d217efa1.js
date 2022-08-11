@@ -1,1 +1,0 @@
-const t={key:"v-18c00164",path:"/post/issue/local-get-txt.html",title:"\u53D6\u5F97\u672C\u5730.txt\u6A94\u65B9\u6CD5",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/issue/local-get-txt.md"};export{t as data};
