@@ -1,0 +1,1 @@
+import{i as o,o as r,j as t}from"./app.a2fa24c7.js";import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";const c={};function s(a,_){const e=o("HomeFeatures");return r(),t(e)}var p=n(c,[["render",s]]);export{p as default};
