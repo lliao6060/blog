@@ -1,1 +1,0 @@
-const a={key:"v-382f79a3",path:"/post/Javascript/js-basic.html",title:"JavaScript\u5165\u9580",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648528515e3,contributors:[{name:"Johnny Wang",email:"wangj@garena.com",commits:1}]},filePathRelative:"post/Javascript/js-basic.md"};export{a as data};

@@ -1,0 +1,1 @@
+const t={key:"v-5c5bb207",path:"/post/Css_Sass/mixin.html",title:"scss mixin",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Css_Sass/mixin.md"};export{t as data};

@@ -1,0 +1,1 @@
+const e={key:"v-0678b7b4",path:"/post/Issue/firework.html",title:"\u7159\u706B\u52D5\u756B",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Issue/firework.md"};export{e as data};

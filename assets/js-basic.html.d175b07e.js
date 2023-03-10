@@ -1,0 +1,1 @@
+const t={key:"v-382f79a3",path:"/post/Javascript/js-basic.html",title:"JavaScript\u5165\u9580",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Javascript/js-basic.md"};export{t as data};

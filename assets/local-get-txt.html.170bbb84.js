@@ -1,0 +1,1 @@
+const t={key:"v-736e236e",path:"/post/Issue/local-get-txt.html",title:"\u53D6\u5F97\u672C\u5730.txt\u6A94\u65B9\u6CD5",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Issue/local-get-txt.md"};export{t as data};

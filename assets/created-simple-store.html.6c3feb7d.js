@@ -1,1 +1,0 @@
-const e={key:"v-124340fe",path:"/post/Vue/Store/created-simple-store.html",title:"\u5275\u5EFAvue simple store",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648717535e3,contributors:[{name:"MOMODA1\\FG000098",email:"meiliao1207@gmail.com",commits:1}]},filePathRelative:"post/Vue/Store/created-simple-store.md"};export{e as data};
