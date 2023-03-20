@@ -147,6 +147,15 @@ module.exports = {
           ],
         },
         {
+          text: 'React',
+          collapsible: true,
+          children: [
+            '/post/React/plugins.md',
+            '/post/React/react-redux.md',
+            '/post/React/react-redux-toolkit.md'
+          ],
+        },
+        {
           text: 'Vite',
           collapsible: true,
           children: [

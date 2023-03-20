@@ -318,6 +318,8 @@
 - Vue2
   - [vue-scrollactive 滾動/點擊tab切換active](https://github.com/eddiemf/vue-scrollactive)
     - [demo](https://codepen.io/Yan06/pen/WNXJMzW?editors=1010)
+- nuxt vue通用
+  - [scroll-active](https://github.com/shalldie/scroll-active)
 
 #### 特效
 - Vue2
