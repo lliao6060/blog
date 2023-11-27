@@ -61,6 +61,17 @@ module.exports = {
           ]
         },
         {
+          text: 'Git Learning',
+          collapsible: true,
+          children: [
+            '/post/Git_Learning/git-Instruction.md',
+            '/post/Git_Learning/git-qa.md',
+            '/post/Git_Learning/git-relate.md',
+            '/post/Git_Learning/git-stash.md',
+            '/post/Git_Learning/sourcetree.md'
+          ]
+        },
+        {
           text: 'Issue',
           collapsible: true,
           children: [
@@ -96,14 +107,6 @@ module.exports = {
             '/post/Javascript/js-basic.md',
             '/post/Javascript/obj-methods.md',
             '/post/Javascript/i18n.md'
-          ],
-        },
-        {
-          text: 'Webpack',
-          collapsible: true,
-          children: [
-            '/post/Webpack/webpack-use-vite-dev.md',
-            '/post/Webpack/getting-start.md',
           ],
         },
         {
@@ -156,6 +159,14 @@ module.exports = {
           ],
         },
         {
+          text: 'Webpack',
+          collapsible: true,
+          children: [
+            '/post/Webpack/webpack-use-vite-dev.md',
+            '/post/Webpack/getting-start.md',
+          ],
+        },
+        {
           text: 'Vite',
           collapsible: true,
           children: [
@@ -165,15 +176,46 @@ module.exports = {
           ],
         },
         {
-          text: 'Git Learning',
+          text: 'Eslint & Prettier',
           collapsible: true,
           children: [
-            '/post/Git_Learning/git-Instruction.md',
-            '/post/Git_Learning/git-qa.md',
-            '/post/Git_Learning/git-relate.md',
-            '/post/Git_Learning/git-stash.md',
-            '/post/Git_Learning/sourcetree.md'
-          ]
+            '/post/Eslint_Prettier/init.md',
+          ],
+        },
+        {
+          text: 'Docker 學習',
+          collapsible: true,
+          children: [
+            '/post/Docker_Learning/base.md',
+          ],
+        },
+        {
+          text: '建構工具類',
+          collapsible: true,
+          children: [
+            '/post/build-plugins/gulp.md',
+          ],
+        },
+        {
+          text: '第三方串接',
+          collapsible: true,
+          children: [
+            '/post/third-party-api/twitter.md',
+            '/post/third-party-api/google-login-api.md',
+            '/post/third-party-api/facebook-login-api.md',
+            '/post/third-party-api/line-liff-api.md',
+            '/post/third-party-api/use-google-sheet-as-db.md',
+            '/post/third-party-api/use-google-sheet-as-db-api-tandem.md',
+            '/post/third-party-api/google-sheet-app-script.md'
+          ],
+        },
+        {
+          text: 'Nuxt學習',
+          collapsible: true,
+          children: [
+            '/post/Nuxt/nuxt2.md',
+            '/post/Nuxt/nuxt3.md',
+          ],
         },
         {
           text: 'UI',
@@ -190,26 +232,6 @@ module.exports = {
             '/post/Others/common-problem.md',
             '/post/Others/input-regex.md',
             '/post/Others/tool.md',
-          ],
-        },
-        {
-          text: '第三方串接',
-          collapsible: true,
-          children: [
-            '/post/third-party-api/google-login-api.md',
-            '/post/third-party-api/facebook-login-api.md',
-            '/post/third-party-api/line-liff-api.md',
-            '/post/third-party-api/use-google-sheet-as-db.md',
-            '/post/third-party-api/use-google-sheet-as-db-api-tandem.md',
-            '/post/third-party-api/google-sheet-app-script.md'
-          ],
-        },
-        {
-          text: 'Nuxt學習',
-          collapsible: true,
-          children: [
-            '/post/Nuxt/nuxt2.md',
-            '/post/Nuxt/nuxt3.md',
           ],
         },
       ]

@@ -507,7 +507,7 @@ onMounted(async () => {
 - [Ryan (ryanchien8125) Nuxt 3 學習筆記 系列全篇(推薦閱讀，很詳細)](https://ithelp.ithome.com.tw/users/20152617/ironman/5934)
 - [Day03 - 深入淺出 CSR、SSR 與 SSG](https://ithelp.ithome.com.tw/articles/10266781)
 - [Nuxt 3 特色功能（二）网页头部](https://juejin.cn/post/7103696957327015943)
-
+    
 ### 網上大神的開源模板
 - [oku-nuxt3-template 使用tailwindcss](https://github.com/productdevbook/oku-nuxt3-template)
 - [nuxt3-starter](https://ithelp.ithome.com.tw/articles/10262891)
