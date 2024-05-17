@@ -32,21 +32,21 @@ export default {
         {
           title: 'Frontend Development',
           details: [
-            'Vuejs 3+years',
-            'Reactjs 0.5+years',
+            'Vuejs 4+years',
+            'Reactjs 1+years',
             'Nuxtjs 0.5+years',
-            'TypeScript 2+years',
-            'SCSS 3+years',
-            'TailwindCSS 0.5+year',
+            'TypeScript 3+years',
+            'SCSS 4+years',
+            'TailwindCSS 1.5+year',
           ],
         },
         {
           title: 'Others',
           details: [
             'Webpack 3+years',
-            'Vite 1.5+years',
+            'Vite 2.5+years',
             'git 3+years',
-            'gitlab 2+years',
+            'gitlab 3+years',
           ],
         },
         {
