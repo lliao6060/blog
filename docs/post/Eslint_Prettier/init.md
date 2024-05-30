@@ -1,19 +1,34 @@
 # ESLint & Prettier筆記
-> 參考[快速搭建 Vite+vue3+TS+ESLint+Prettier+Husky+Commitlint 项目](https://juejin.cn/post/7265455444037533755)
+> 參考[快速搭建 Vite+vue3+TS+ESLint+Prettier+Husky+Commitlint 项目](https://juejin.cn/post/7265455444037533755) & [Vite5.0+Typescript+Vue3+Pinia 最新搭建企业级前端项目](https://juejin.cn/post/7228978346502946874)
 
 ### 安裝
-
-- 注意： `simple-import-sort/imports`(for eslint) 跟 `@ianvs/prettier-plugin-sort-imports`(for prettier) 則一安裝
-- 如果裝`simple-import-sort/imports`記得裝記得裝`eslint-plugin-import`
-
 ```js
 npm init @eslint/config // eslint初始化
 
 // eslint + Prettier
-yarn add prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue -D
+//eslint 安装 最新9.+版太不穩定先不升級
+yarn add eslint@^8.39.0 -D
 
-// Husky + lint-staged
-yarn add husky lint-staged -D
+//eslint vue插件安装
+yarn add eslint-plugin-vue -D
+
+//eslint 识别ts语法
+yarn add  @typescript-eslint/parser -D
+
+//eslint ts默认规则补充
+yarn add @typescript-eslint/eslint-plugin -D
+
+//eslint prettier插件安装
+yarn add eslint-plugin-prettier -D
+
+//用来解决与eslint的冲突
+yarn add eslint-config-prettier -D
+
+//安装prettier
+yarn add prettier -D
+
+// Husky
+yarn add husky -D
 npm pkg set scripts.prepare="husky install"
 npm run prepare
 npx husky add .husky/pre-commit "npm run lint"
@@ -23,9 +38,7 @@ yarn add @commitlint/cli @commitlint/config-conventional commitizen cz-conventio
 npx husky add .husky/commit-msg 'npx --no-install commitlint -e "$HUSKY_GIT_PARAMS"'
 npx commitizen init cz-conventional-changelog --save-dev --save-exact
 
-yarn add eslint-plugin-simple-import-sort@latest -d 
-// prettier-plugin-sort-imports 可選
-// yarn add --dev @ianvs/prettier-plugin-sort-imports
+yarn add eslint-plugin-simple-import-sort@latest eslint-plugin-import -d 
 
 ```
 
@@ -35,8 +48,7 @@ yarn add eslint-plugin-simple-import-sort@latest -d
 scripts: {
     "commit": "git add . && git-cz",
     "prepare": "husky install",
-    "lint-staged": "lint-staged",
-    "lint": "./node_modules/.bin/eslint --ext .js,ts,.tsx,.vue ./src --fix",
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx --max-warnings 0 --fix",
     "lint-fix": "eslint --fix .",
     "prettier": "prettier --write ./src"
 },
@@ -45,23 +57,11 @@ scripts: {
       "path": "./node_modules/cz-customizable"
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
-    }
-  },
-  "lint-staged": { // prettier在前面可以避免和eslint的衝突
-    "*.{js,ts,vue,jsx,tsx}": [
-      "yarn prettier",
-      "yarn lint"
-    ]
-  },
-
 ```
 
 - eslint
 ```js
+// .eslintrc.js
 module.exports = {
   env: {
     browser: true,
@@ -69,56 +69,62 @@ module.exports = {
     es6: true,
   },
   globals: {
-    defineProps: "readonly",
-    defineEmits: "readonly",
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
   },
   /* 指定如何解析语法。*/
-  parser: "vue-eslint-parser",
+  parser: 'vue-eslint-parser',
   /* 优先级低于parse的语法解析配置 */
   parserOptions: {
-    parser: "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   extends: [
-    "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended", // typescript-eslint推荐规则,
-    "prettier",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "eslint-config-prettier"
   ],
-  plugins: ["vue", "import", "simple-import-sort"],
+  plugins: ['vue', 'import', 'simple-import-sort', "prettier"],
   rules: {
     // 禁止使用 var
-    "no-var": "error",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-this-alias": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-loss-of-precision": "off",
-    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-    "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/quotes": [
-      "error",
-      "single",
+    'no-var': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-loss-of-precision': 'off',
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/quotes': [
+      'error',
+      'single',
       {
         avoidEscape: true,
         allowTemplateLiterals: true,
       },
     ],
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "no-empty": "off",
-    "no-useless-escape": "off",
-    "no-undef": "off",
-    "no-irregular-whitespace": "off",
-    "no-fallthrough": "off",
-    "no-prototype-builtins": "off",
-    "no-self-assign": "off",
-    "no-case-declarations": "off",
-    "no-async-promise-executor": "off",
-    "no-empty-pattern": "off",
-    "no-unsafe-optional-chaining": "off",
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-empty': 'off',
+    'no-useless-escape': 'off',
+    'no-undef': 'off',
+    'no-irregular-whitespace': 'off',
+    'no-fallthrough': 'off',
+    'no-prototype-builtins': 'off',
+    'no-self-assign': 'off',
+    'no-case-declarations': 'off',
+    'no-async-promise-executor': 'off',
+    'no-empty-pattern': 'off',
+    'no-unsafe-optional-chaining': 'off',
     // 下面两个规则可以去 参照4 规则看详细介绍
-    "vue/html-indent": [
-      "error",
+    'vue/html-indent': [
+      'error',
       2,
       {
         attribute: 1,
@@ -128,8 +134,8 @@ module.exports = {
         ignores: [],
       },
     ],
-    "vue/max-attributes-per-line": [
-      "error",
+    'vue/max-attributes-per-line': [
+      'error',
       {
         singleline: {
           max: 10,
@@ -139,62 +145,69 @@ module.exports = {
         },
       },
     ],
-    "vue/block-order": [
-      "error",
+    'vue/block-order': [
+      'error',
       {
-        order: ["script[setup]", "script:not([setup])", "template", "style"],
+        order: ['script[setup]', 'script:not([setup])', 'template', 'style'],
       },
     ],
-    "vue/multi-word-component-names": "off",
-    "vue/require-explicit-emits": "off",
-    "vue/no-dupe-keys": "off",
-    "vue/require-default-prop": "off",
-    "vue/return-in-computed-property": "off",
-    "vue/no-reserved-component-names": "off",
-    "vue/no-side-effects-in-computed-properties": "off",
-    "vue/no-v-html": "off",
-    "vue/require-prop-types": "off",
-    "vue/no-unused-vars": "off",
-    "vue/prop-name-casing": "off",
-    "vue/v-on-event-hyphenation": "off",
-    "vue/no-parsing-error": "off",
-    "vue/valid-v-for": "off",
-    "vue/require-v-for-key": "off",
-    "vue/valid-v-slot": "off",
-    "vue/no-unused-components": "off",
-    "vue/no-mutating-props": "off",
-    "vue/attribute-hyphenation": "off",
-    "vue/no-template-shadow": "off",
-    "vue/no-lone-template": "off",
-    "vue/no-useless-template-attributes": "off",
-    "simple-import-sort/imports": [
-      "error",
+    'vue/multi-word-component-names': 'off',
+    'vue/require-explicit-emits': 'off',
+    'vue/no-dupe-keys': 'off',
+    'vue/require-default-prop': 'off',
+    'vue/return-in-computed-property': 'off',
+    'vue/no-reserved-component-names': 'off',
+    'vue/no-side-effects-in-computed-properties': 'off',
+    'vue/no-v-html': 'off',
+    'vue/require-prop-types': 'off',
+    'vue/no-unused-vars': 'off',
+    'vue/prop-name-casing': 'off',
+    'vue/v-on-event-hyphenation': 'off',
+    'vue/no-parsing-error': 'off',
+    'vue/valid-v-for': 'off',
+    'vue/require-v-for-key': 'off',
+    'vue/valid-v-slot': 'off',
+    'vue/no-unused-components': 'off',
+    'vue/no-mutating-props': 'off',
+    'vue/attribute-hyphenation': 'off',
+    'vue/no-template-shadow': 'off',
+    'vue/no-lone-template': 'off',
+    'vue/no-useless-template-attributes': 'off',
+    'simple-import-sort/imports': [
+      'error',
       {
         groups: [
           // vue放在首行
-          ["^vue"],
+          ['^vue'],
           // 同级导入. 把同一个文件夹.放在最后
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
           // 以字母(或数字或下划线)或“@”后面跟着字母开头的东西,通常为nodeModules引入
-          ["^@?\\w"],
+          ['^@?\\w'],
           // 内部导入 "@/"
-          ["^@(/.*|$)"],
+          ['^@(/.*|$)'],
           // 父级导入. 把 `..` 放在最后.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // 样式导入.
-          ["^.+\\.?(css|less|scss)$"],
+          ['^.+\\.?(css|less|scss)$'],
           // 带有副作用导入，比如import 'a.css'这种.
-          ["^\\u0000"],
+          ['^\\u0000'],
         ],
       },
     ],
-    "simple-import-sort/exports": "error", // 导出
-    "import/no-duplicates": "error", // 合并同一个导入。ide自动导入，会导致impoprt {a} from 'A'和impoprt {a1} from 'A'导入2次
-    "import/first": "error", // 确保所有导入位于文件的顶部
-    "import/newline-after-import": "error", // 确保在导入后有换行符
+    'simple-import-sort/exports': 'error', // 导出
+    'import/no-duplicates': 'error', // 合并同一个导入。ide自动导入，会导致impoprt {a} from 'A'和impoprt {a1} from 'A'导入2次
+    'import/first': 'error', // 确保所有导入位于文件的顶部
+    'import/newline-after-import': 'error', // 确保在导入后有换行符
   },
 };
+```
 
+```js
+.eslintignore
+
+src/assets/**/*.*
+node_modules
+dist
 ```
 
 - prettier
@@ -205,45 +218,30 @@ module.exports = {
   tabWidth: 2, //缩进长度
   useTabs: false, //使用空格代替tab缩进
   semi: true, //句末使用分号
-  // singleQuote: true, //使用单引号 跟eslint一起用時要隱藏
-  quoteProps: 'as-needed', //仅在必需时为对象的key添加引号
+  singleQuote: true, //使用单引号 跟eslint一起用時要隱藏
+  quoteProps: "as-needed", //仅在必需时为对象的key添加引号
   jsxSingleQuote: true, // jsx中x使用单引号
-  trailingComma: 'all', //多行时尽可能打印尾随逗号
+  trailingComma: "all", //多行时尽可能打印尾随逗号
   bracketSpacing: true, //在对象前后添加空格-eg: { foo: bar }
   jsxBracketSameLine: true, //多属性html标签的‘>’折行放置
-  arrowParens: 'always', //单参数箭头函数参数周围使用圆括号-eg: (x) => x
+  arrowParens: "always", //单参数箭头函数参数周围使用圆括号-eg: (x) => x
   requirePragma: false, //无需顶部注释即可格式化
   insertPragma: false, //在已被preitter格式化的文件顶部加上标注
-  proseWrap: 'preserve', //尊重輸入中的換行符
-  htmlWhitespaceSensitivity: 'ignore', //对HTML全局空白不敏感
+  proseWrap: "preserve", //尊重輸入中的換行符
+  htmlWhitespaceSensitivity: "ignore", //对HTML全局空白不敏感
   vueIndentScriptAndStyle: false, //不对vue中的script及style标签缩进
-  endOfLine: 'lf', //结束行形式
-  embeddedLanguageFormatting: 'auto', //对引用代码进行格式化
-    
-  可選（沒有eslint好用）
-  // Since prettier 3.0, manually specifying plugins is required
-  // plugins: ['@ianvs/prettier-plugin-sort-imports'],
-  // // This plugin's options
-  // importOrder: [
-  //   '^[./]',
-  //   '',
-  //   '^vue',
-  //   '',
-  //   '<BUILTIN_MODULES>', // Node.js built-in modules
-  //   '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
-  //   '',
-  //   '^[.]', // relative imports,
-  //   '',
-  //   '^@/(.*)$',
-  //   '',
-  //   '^.(css|scss)$',
-  // ],
-  // importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-  // importOrderTypeScriptVersion: '5.0.0',
+  endOfLine: "auto", //结束行形式
+  embeddedLanguageFormatting: "auto", //对引用代码进行格式化
 };
-
-
 ```
+```js
+.prettierignore
+
+.eslintrc.js
+node_modules
+dist
+```
+
 
 - husky
 ```json
@@ -252,12 +250,11 @@ module.exports = {
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# yarn lint-staged
 if git diff --cached --quiet ; then
   echo "This is a pure amend"
 else
   echo "This is a commit with changes"
-  yarn lint-staged
+  npm run lint && npm run prettier && (npm run coverage || true) && npm run build
 fi
 ```
 
@@ -324,3 +321,4 @@ module.exports = {
 - [Uncaught ReferenceError: Cannot access '__WEBPACK_DEFAULT_EXPORT__' before initialization](https://stackoverflow.com/questions/65038253/uncaught-referenceerror-cannot-access-webpack-default-export-before-initi)
 - [prettier-plugin-sort-imports ignores import order](https://stackoverflow.com/questions/76127977/prettier-plugin-sort-imports-ignores-import-order)
 - [使用eslint自动调整代码引入顺序(react版)](https://cloud.tencent.com/developer/article/2246755)
+- [Vite5.0+Typescript+Vue3+Pinia 最新搭建企业级前端项目](https://juejin.cn/post/7228978346502946874)
