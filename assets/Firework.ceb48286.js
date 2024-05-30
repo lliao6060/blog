@@ -1,1 +1,0 @@
-import{o as e,c as r}from"./app.e9af339b.js";import{_ as o}from"./plugin-vue_export-helper.21dcd24c.js";const t={name:"",data(){}},_={class:"firework"};function a(s,c,n,i,p,d){return e(),r("div",_)}var m=o(t,[["render",a]]);export{m as default};
