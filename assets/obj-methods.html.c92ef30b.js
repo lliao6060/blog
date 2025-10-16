@@ -1,0 +1,1 @@
+const t={key:"v-c1f01f4c",path:"/post/Frontend-Basics/Javascript/obj-methods.html",title:"JavaScript\u7269\u4EF6 & \u65B9\u6CD5",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Frontend-Basics/Javascript/obj-methods.md"};export{t as data};

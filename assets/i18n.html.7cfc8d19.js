@@ -1,0 +1,1 @@
+const t={key:"v-0e263d3e",path:"/post/Frontend-Basics/Javascript/i18n.html",title:"i18n\u7B46\u8A18",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Frontend-Basics/Javascript/i18n.md"};export{t as data};

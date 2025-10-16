@@ -1,0 +1,1 @@
+const e={key:"v-81134cc6",path:"/post/DevOps/shell-demo.html",title:"Docker Shell \u8173\u672C\u7BC4\u4F8B",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/DevOps/shell-demo.md"};export{e as data};

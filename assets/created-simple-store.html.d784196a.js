@@ -1,0 +1,1 @@
+const e={key:"v-124340fe",path:"/post/Vue/Store/created-simple-store.html",title:"\u5275\u5EFAvue simple store",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Vue/Store/created-simple-store.md"};export{e as data};

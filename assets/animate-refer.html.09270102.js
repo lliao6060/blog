@@ -1,0 +1,1 @@
+const t={key:"v-614591d7",path:"/post/Frontend-Basics/CSS-Sass/animate-refer.html",title:"css\u52D5\u756B\u53C3\u8003",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Frontend-Basics/CSS-Sass/animate-refer.md"};export{t as data};

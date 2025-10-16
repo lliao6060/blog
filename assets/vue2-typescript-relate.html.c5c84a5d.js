@@ -1,0 +1,1 @@
+const e={key:"v-72f867d6",path:"/post/Vue/Vue2/vue2-typescript-relate.html",title:"Vue + typeScript\u914D\u7F6E\u7B46\u8A18",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Vue/Vue2/vue2-typescript-relate.md"};export{e as data};

@@ -1,1 +1,0 @@
-const t={key:"v-84eaffd6",path:"/post/Javascript/css-autoprefixer.html",title:"Css\u700F\u89BD\u5668\u81EA\u52D5\u88DC\u8DB3\u517C\u5BB9",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Javascript/css-autoprefixer.md"};export{t as data};

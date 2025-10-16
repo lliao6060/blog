@@ -1,1 +1,0 @@
-const e={key:"v-124340fe",path:"/post/Vue/Store/created-simple-store.html",title:"\u5275\u5EFAvue simple store",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Vue/Store/created-simple-store.md"};export{e as data};

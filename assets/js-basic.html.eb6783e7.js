@@ -1,0 +1,1 @@
+const t={key:"v-bd550a9c",path:"/post/Frontend-Basics/Javascript/js-basic.html",title:"JavaScript\u5165\u9580",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1760575492e3,contributors:[{name:"Lindy Liao",email:"lliao6060@github.com",commits:1}]},filePathRelative:"post/Frontend-Basics/Javascript/js-basic.md"};export{t as data};

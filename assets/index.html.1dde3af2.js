@@ -1,1 +1,0 @@
-const t={key:"v-15217c36",path:"/post/",title:"Index",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/README.md"};export{t as data};

@@ -1,1 +1,0 @@
-const t={key:"v-6172bfc9",path:"/post/Javascript/obj-methods.html",title:"JavaScript\u7269\u4EF6 & \u65B9\u6CD5",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1678414858e3,contributors:[{name:"\u5ED6\u7F9A\u4F51",email:"FG000098@fingergame.com.tw",commits:1}]},filePathRelative:"post/Javascript/obj-methods.md"};export{t as data};
