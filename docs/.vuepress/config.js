@@ -79,11 +79,11 @@ module.exports = {
           text: '版本控制 Git',
           collapsible: true,
           children: [
-            '/post/Git_Learning/git-Instruction.md',
-            '/post/Git_Learning/git-relate.md',
-            '/post/Git_Learning/git-qa.md',
-            '/post/Git_Learning/git-stash.md',
-            '/post/Git_Learning/sourcetree.md'
+            '/post/Git-Learning/git-Instruction.md',
+            '/post/Git-Learning/git-relate.md',
+            '/post/Git-Learning/git-qa.md',
+            '/post/Git-Learning/git-stash.md',
+            '/post/Git-Learning/sourcetree.md'
           ]
         },
         {
@@ -110,9 +110,11 @@ module.exports = {
                 '/post/Frontend-Basics/Javascript/axios.md',
                 '/post/Frontend-Basics/Javascript/utils.md',
                 '/post/Frontend-Basics/Javascript/css-autoprefixer.md',
-                '/post/Frontend-Basics/Javascript/i18n.md'
+                '/post/Frontend-Basics/Javascript/i18n.md',
+                '/post/Frontend-Basics/Javascript/input-regex.md'
               ]
-            }
+            },
+            '/post/Frontend-Basics/common-problem.md'
           ],
         },
         {
@@ -260,14 +262,6 @@ module.exports = {
             '/post/Third-Party-Integration/use-google-sheet-as-db.md',
             '/post/Third-Party-Integration/use-google-sheet-as-db-api-tandem.md',
             '/post/Third-Party-Integration/google-sheet-app-script.md'
-          ],
-        },
-        {
-          text: '其他筆記',
-          collapsible: true,
-          children: [
-            '/post/Others/common-problem.md',
-            '/post/Others/input-regex.md',
           ],
         },
       ]
