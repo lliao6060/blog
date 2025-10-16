@@ -59,6 +59,7 @@ module.exports = {
             '/post/Development-Tools/work-env.md',
             '/post/Development-Tools/vscode.md',
             '/post/Development-Tools/cursor-figma-mcp.md',
+            '/post/Development-Tools/mockoon.md',
             '/post/Development-Tools/homebrew.md',
             '/post/Development-Tools/ngrok.md',
             '/post/Development-Tools/tool.md',
@@ -152,6 +153,7 @@ module.exports = {
               ]
             },
             '/post/Vue/components.md',
+            '/post/Vue/custom-toast-modal.md',
             '/post/Vue/plugins.md',
           ],
         },
@@ -181,6 +183,8 @@ module.exports = {
               ]
             },
             '/post/React/plugins.md',
+            '/post/React/ui-frameworks.md',
+            '/post/React/vitest-testing.md',
             '/post/React/theme-system.md',
           ],
         },
